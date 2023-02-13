@@ -13,7 +13,33 @@
 <header>
     <div class="nav container">
         <a href="#" class="logo">Luffy Store</a>
-        <i class='bx bxs-shopping-bags'></i>
+        <i class='bx bxs-shopping-bags cartIcon'></i>
+
+        <!-- cart -->
+        <div class="cart">
+            <div class="cart-cabecalho">
+                <h2 class="cart-title">Sua Sacola</h2>
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="img/product1.jpg" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <h4 class="cart-product-title">AEROREADY SHIRT</h4>
+                        <small class="cart-price">R$95,00</small>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <i class='bx bx-trash card-remove'></i>
+                </div>
+            </div>
+
+            <div class="total">
+                <h2 class="total-title">Total</h2>
+                <div class="total-price">R$0</div>
+            </div>
+            <button type="button" class="btn-buy">Pagar Agora</button>
+            
+        </div>
     </div>
 </header>
 
@@ -54,6 +80,6 @@
     </section>
 
 </main>
-    
+    <script src="main.js"></script>
 </body>
 </html>
