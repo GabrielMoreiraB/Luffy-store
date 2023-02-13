@@ -1,0 +1,23 @@
+@import 'conteudo/variaveis';
+@import 'componentes/header';
+@import 'componentes/cart';
+@import 'componentes/shop';
+
+*{
+    font-family: $fonte;
+    margin: 0px;
+    padding: 0px;
+    scroll-padding-top: 2em;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body{
+ color: $color-sec;  
+ background-color: $bg-color; 
+}
+
+
+

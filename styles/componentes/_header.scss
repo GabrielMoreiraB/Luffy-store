@@ -1,0 +1,31 @@
+@import'../conteudo/variaveis';
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $bg-color;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem ;
+        color: $color-sec;
+        .logo{
+            font-size: 1.3rem;
+            color: $color-sec;
+            font-weight: 400;
+        }
+        i{
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+    }
+    .container{
+        max-width: 1100px;
+        margin: auto;
+        width: 100%;
+    }
+}

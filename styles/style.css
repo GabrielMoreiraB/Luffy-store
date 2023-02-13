@@ -1,0 +1,122 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
+img {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #171427;
+}
+header .nav .logo {
+  font-size: 1.3rem;
+  color: #171427;
+  font-weight: 400;
+}
+header .nav i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+header .container {
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.shop {
+  margin-top: 2rem;
+}
+
+section {
+  padding: 4rem 0 3rem;
+}
+section .section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+section .shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+}
+section .shop-content .product-box {
+  position: relative;
+}
+section .shop-content .product-box:hover {
+  border: 1px solid black;
+  transition: 0.4s;
+}
+section .shop-content .product-box .container-img {
+  position: relative;
+}
+section .shop-content .product-box .container-img:hover {
+  padding: 10px;
+  transition: 0.4s;
+}
+section .shop-content .product-box .container-img img {
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+section .shop-content .product-box .product-title {
+  padding: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+section .shop-content .product-box .price {
+  font-weight: 500;
+  padding: 5px;
+}
+section .shop-content .product-box .add-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.2rem;
+  background-color: #171427;
+  color: #fff;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  scroll-padding-top: 2em;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  color: #171427;
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */
