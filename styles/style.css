@@ -36,7 +36,6 @@ header .nav i {
   cursor: pointer;
 }
 header .container {
-  max-width: 1100px;
   margin: auto;
   width: 100%;
 }
@@ -213,4 +212,8 @@ section .shop-content .product-box .add-cart {
 body {
   color: #171427;
   background-color: #fff;
+}
+
+.modelo {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
