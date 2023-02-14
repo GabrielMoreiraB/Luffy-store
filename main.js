@@ -33,7 +33,7 @@ const closeCart = document.getElementById('close-cart');
 const shopContent= document.querySelector('.shop-content');
 
 
-let cartArray = [{
+const cartArray = [{
     id:1,
     img: "img/product1.jpg",
     name: "AEROREADY SHIRT",
@@ -60,9 +60,9 @@ window.addEventListener('DOMContentLoaded', function(){
     addCart = [...addCart];
 
 
-    let chave = chaveClickAdd(addCart);
+    atualizaArrayCart(addCart);
     
-  })
+})
 
   function carregaProdutos(dispMenu){
     let displayMenu = dispMenu.map(function(item){
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function(){
             <img src=${item.img} alt="" class="produtc-img">
         </div>
         <h4 class="product-title">${item.name}</h4>
-        <span class="price">R$${item.price}</span>
+        <span class="price">R$${(item.price.toFixed(2))}</span>
         <i class='bx bx-cart-add add-cart ' data-id="${item.id}"></i>
        </div>`
     })
@@ -83,16 +83,32 @@ window.addEventListener('DOMContentLoaded', function(){
   
   
         
-    function chaveClickAdd(addCart){
+    function atualizaArrayCart(addCart){
         addCart.forEach(function(item){
             item.addEventListener('click',function(btn){
                 const num = btn.target.dataset.id;
-                const itemClicado = produtos.find(item => item.id == num)
-    console.log(itemClicado)
+                let itemClicado = produtos.find(item => item.id == num);
+                console.log(itemClicado);
+                const existe = cartArray.find(item => item.id == num);
+
+                if(existe){
+                    itemClicado =cartArray.find(item => item.id == num);
+                    cartArray.splice((item.id-1),1)
+                    itemClicado.quant ++;
+                } else{
+                    itemClicado.quant = 1;
+                }
+
+                addDispCart()
+                cartArray.push(itemClicado);
+                console.log(cartArray)
             })
         })
     }
     
+    function addDispCart(){
+
+    }
 
 
 
