@@ -51,9 +51,17 @@ cartIcon.addEventListener('click', () =>{
 closeCart.addEventListener('click', () =>{
     cart.classList.remove('active');
 })
+////////////////////////////////////////////////////////////////////////////////
 
 window.addEventListener('DOMContentLoaded', function(){
     carregaProdutos(produtos);
+
+    let addCart = document.querySelectorAll('.product-box .add-cart');
+    addCart = [...addCart];
+
+
+    let chave = chaveClickAdd(addCart);
+    
   })
 
   function carregaProdutos(dispMenu){
@@ -64,7 +72,7 @@ window.addEventListener('DOMContentLoaded', function(){
         </div>
         <h4 class="product-title">${item.name}</h4>
         <span class="price">R$${item.price}</span>
-        <i class='bx bx-cart-add add-cart ${item.id}'></i>
+        <i class='bx bx-cart-add add-cart ' data-id="${item.id}"></i>
        </div>`
     })
     displayMenu = displayMenu.join("");
@@ -72,19 +80,19 @@ window.addEventListener('DOMContentLoaded', function(){
     shopContent.innerHTML = displayMenu;
   }
 
-  const addCart = document.getElementsByClassName('add-cart');
- console.log(addCart)
-  const a = [...addCart];
-  console.log(a)
+  
+  
         
-    function additemcart(){
-        a.forEach(function(item){
+    function chaveClickAdd(addCart){
+        addCart.forEach(function(item){
             item.addEventListener('click',function(btn){
-                console.log(btn)
+                const num = btn.target.dataset.id;
+                const itemClicado = produtos.find(item => item.id == num)
+    console.log(itemClicado)
             })
         })
     }
-    additemcart()
+    
 
 
 
