@@ -91,9 +91,9 @@ window.addEventListener('DOMContentLoaded', function(){
                 const existe = cartArray.find(item => item.id == num);
 
                 if(existe){
-                    /*itemClicado =cartArray.find(item => item.id == num);
-                    cartArray.splice((item.id-1),1)*/
-                    console.log(cartArray[2]) 
+                    let index = cartArray.findIndex(elemento => elemento.id ===existe.id)
+                    cartArray[index].quant++
+                    console.log(cartArray[index].quant) 
 
                 } else{
                     itemClicado.quant = 1;
@@ -135,7 +135,8 @@ window.addEventListener('DOMContentLoaded', function(){
         cartItem.querySelector('.cart-product-title').innerHTML= item.name;
         cartItem.querySelector('.cart-price').innerHTML = val;
         cartItem.querySelector('.cart-quantity').value =item.quant;
-        a (cartItem,item);
+
+        a(cartItem,item);
 
         let cartremove = cartItem.querySelector('.card-remove');
 
@@ -177,11 +178,13 @@ window.addEventListener('DOMContentLoaded', function(){
     function a (cartItem, item){
         const quantidade = cartItem.querySelector('.cart-quantity');
         quantidade.addEventListener('change', (event) => {
+            //console.log(event.target.value)
             let elpai = quantidade.parentNode.querySelector('.cart-product-title').innerHTML;
-            let itemadd = cartArray.find(item => item.name == elpai);
+            //console.log(elpai)
             let index = cartArray.findIndex(item => item.name == elpai);
-            console.log(itemadd);
-            itemadd[index].quant = event.target.value;
+            console.log(index)
+            cartArray[index].quant = event.target.value;
+            atualizaTotal ()
         })
     }
 
