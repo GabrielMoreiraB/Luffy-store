@@ -31,14 +31,9 @@ const cart = document.querySelector('.cart');
 const closeCart = document.getElementById('close-cart');
 
 const shopContent= document.querySelector('.shop-content');
+const cartContent = document.querySelector('.cart-content');
 
-
-const cartArray = [{
-    id:1,
-    img: "img/product1.jpg",
-    name: "AEROREADY SHIRT",
-    price: 95.00,
-},]
+const cartArray = []
 
 
 //Abre e fecha menu 
@@ -61,6 +56,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
     atualizaArrayCart(addCart);
+    
     
 })
 
@@ -93,22 +89,42 @@ window.addEventListener('DOMContentLoaded', function(){
 
                 if(existe){
                     itemClicado =cartArray.find(item => item.id == num);
+                    
                     cartArray.splice((item.id-1),1)
                     itemClicado.quant ++;
                 } else{
                     itemClicado.quant = 1;
                 }
 
-                addDispCart()
                 cartArray.push(itemClicado);
+                addDispCart();
                 console.log(cartArray)
             })
         })
     }
     
     function addDispCart(){
+        cartContent.innerText = '';
+        cartArray.forEach(function(item){
+            let cartItem = document.querySelector('.cart-box').cloneNode(true);
 
+            cartContent.appendChild(cartItem);
+
+            preencheCartItem(cartItem, item);
+        })
     }
+
+    function preencheCartItem(cartItem, item){
+        cartItem.querySelector('.cart-img').src = item.img;
+        cartItem.querySelector('.cart-product-title').innerHTML= item.name;
+        cartItem.querySelector('.cart-price').innerHTML = item.price;
+        cartItem.querySelector('.cart-quantity'). value = item.quant;
+    }
+
+
+
+
+
 
 
 
