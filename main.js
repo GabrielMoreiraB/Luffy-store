@@ -257,10 +257,39 @@ window.addEventListener('DOMContentLoaded', function(){
     console.log(listaItens);
     console.log(idx)
     setInterval(carrossel, 9000)
-    /* itensDoBanner.addEventListener("wheel", function(event) {
-        if(event.deltaY > 0){
-            event.target.scrollBy(300, 0);
-        }else{
-            event.target.scrollBy(-300, 0)
+
+
+    /* Modal  */
+
+    const btnBuy = document.querySelector('.btn-buy');
+    const modal = document.querySelector('.modal');
+    const modalCompras = document.querySelector('.modal-compras');
+    const closeModal = document.querySelector('#close-modal');
+    const totalModelValue = document.querySelector('.total-modal-resul');
+
+    btnBuy.addEventListener('click', () =>{
+        modal.showModal()
+        totalModelValue.innerHTML = totalPrice.innerHTML;
+        addDispmodel(cartArray)
+    })
+
+    closeModal.addEventListener('click', () =>{
+        modal.close()
+    })
+
+
+
+    function addDispmodel(cartArray){
+        let dispModal = cartArray.map(function(item){
+            return `<div class="modal-box">
+            <img src=${item.img} alt="" class="modal-img">
+            <h4 class="modal-product-title">${item.name}</h4>
+            <div class="modal-box-info">
+                <small class="modal-price">R$${(item.price.toFixed(2))}</small>
+                <p class="modal-quantity">Quant: ${item.quant}</p>
+            </div>
+        </div>`
+        })
+        dispModal = dispModal.join('');
+        modalCompras.innerHTML = dispModal
         }
-    }) */

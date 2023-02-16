@@ -1,0 +1,62 @@
+@import'../conteudo/variaveis';
+
+.modal{
+    width: 80vw;
+    max-width: 700px;
+    padding: 2em;
+    margin: auto;
+    border-radius:  .5rem;
+    box-shadow:  0 0 1rem  rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    
+    &::backdrop{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .cabecalho-modal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 3em;
+        .logo-modal{
+            width: 50px;
+        }
+        i{
+            font-size: x-large;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .modal-compras{
+            height: 30vh;
+            overflow-y: auto;
+        }
+
+        div.total-m{
+            margin-top: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.modal-box{
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    gap: 1rem;
+    .modal-img{
+        width: 100px;
+        padding: 100px;
+        object-fit: contain;
+        padding: 5px;
+    }
+
+    .modal-product-title{
+        text-transform: uppercase;
+    }
+
+    .modal-box-info{
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+    }
+}
