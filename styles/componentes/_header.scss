@@ -8,20 +8,39 @@ header{
     background-color: $bg-color;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     z-index: 999;
+
+    .logo-container{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        margin-left: 5em;
+        .logo{
+            width: 50px;
+        }
+        .logoName{
+            font-size: 1.3rem;
+            font-weight: bolder;
+            color: $color-sec;
+            font-weight: 400;
+        }
+    }
+    
     .nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1rem ;
         color: $color-sec;
-        .logo{
+        .logoName{
             font-size: 1.3rem;
+            font-weight: 900;
             color: $color-sec;
             font-weight: 400;
         }
         i{
             font-size: 1.8rem;
             cursor: pointer;
+            margin-right: 1em;
         }
     }
     .container{

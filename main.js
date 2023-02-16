@@ -1,24 +1,73 @@
 const produtos = [
+    
     {
         id:1,
+        img: "img/product12.png",
+        name: "Blusão Nike LAL",
+        price: 399.90,
+    },
+    {
+        id:2,
+        img: "img/product11.png",
+        name: "Nike Men's Jacket",
+        price: 3299.99,
+    },
+    {
+        id:3,
+        img: "img/product10.png",
+        name: "Jaqueta Nike Sportswear",
+        price: 399.90,
+    },
+    {
+        id:4,
+        img: "img/product9.png",
+        name: "Camisa Nike Corinthians III",
+        price: 599.90,
+    },
+    {
+        id:5,
+        img: "img/product8.png",
+        name: "Camiseta Nike Brasil I",
+        price: 249.90,
+    },
+    {
+        id:6,
+        img: "img/product7.jpg",
+        name: "Mochila Adidas",
+        price: 495.00,
+    },
+    {
+        id:7,
+        img: "img/product6.jpg",
+        name: "Boné Adidas Unissex",
+        price: 95.00,
+    },
+    {
+        id:8,
+        img: "img/product5.png",
+        name: "Boné Jordan Jumpman Heritage86",
+        price: 195.00,
+    },
+    {
+        id:9,
         img: "img/product1.jpg",
         name: "AEROREADY SHIRT",
         price: 95.00,
     },
     {
-        id:2,
+        id:10,
         img: "img/product2.jpg",
         name: "WIRELESS EARBUBS",
         price: 595.00,
     },
     {
-        id:3,
+        id:11,
         img: "img/product3.jpg",
         name: "HOODED PARKA",
         price: 389.90,
     },
     {
-        id:4,
+        id:12,
         img: "img/product4.jpg",
         name: "exercise bottle",
         price: 389.90,
@@ -188,3 +237,30 @@ window.addEventListener('DOMContentLoaded', function(){
         })
     }
 
+
+
+    /* Banner */
+
+    const itensDoBanner =document.querySelector('.banner-items');
+    const listaItens = document.querySelectorAll('.banner-items .item');
+    let idx = 0;
+
+    function carrossel(){
+        idx++;
+        itensDoBanner.scrollBy(300 , 0);
+        if(idx >= listaItens.length){
+            idx=0;
+            itensDoBanner.scrollBy(-4000 , 0);
+        }
+        
+    }
+    console.log(listaItens);
+    console.log(idx)
+    setInterval(carrossel, 9000)
+    /* itensDoBanner.addEventListener("wheel", function(event) {
+        if(event.deltaY > 0){
+            event.target.scrollBy(300, 0);
+        }else{
+            event.target.scrollBy(-300, 0)
+        }
+    }) */
