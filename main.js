@@ -120,7 +120,14 @@ window.addEventListener('DOMContentLoaded', function(){
         </div>
         <h4 class="product-title">${item.name}</h4>
         <span class="price">R$${(item.price.toFixed(2))}</span>
+        <div class="selecao">
         <i class='bx bx-cart-add add-cart ' data-id="${item.id}"></i>
+        <select class="size" name="size">
+            <option value="G">G</option>
+            <option value="M">M</option>
+            <option value="P">P</option>
+         </select>
+         </div>
        </div>`
     })
     displayMenu = displayMenu.join("");
@@ -135,21 +142,24 @@ window.addEventListener('DOMContentLoaded', function(){
         addCart.forEach(function(item){
             item.addEventListener('click',function(btn){
                 const num = btn.target.dataset.id;
+                const paiclick = item.parentNode;
+                //console.log(paiclick)
                 let itemClicado = produtos.find(item => item.id == num);
                 //console.log(itemClicado);
                 const existe = cartArray.find(item => item.id == num);
+                const SIZE = paiclick.querySelector('.size');
+                itemClicado.size = SIZE.value
 
                 if(existe){
                     let index = cartArray.findIndex(elemento => elemento.id ===existe.id)
                     cartArray[index].quant++
-                    console.log(cartArray[index].quant) 
+                    //console.log(cartArray[index].quant) 
 
                 } else{
                     itemClicado.quant = 1;
                     cartArray.push(itemClicado);
                 }
-
-                
+                console.log(cartArray)
                 addDispCart();
                 atualizaTotal();
             })
@@ -254,8 +264,8 @@ window.addEventListener('DOMContentLoaded', function(){
         }
         
     }
-    console.log(listaItens);
-    console.log(idx)
+    //console.log(listaItens);
+    //console.log(idx)
     setInterval(carrossel, 9000)
 
 
