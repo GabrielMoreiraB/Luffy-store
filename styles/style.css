@@ -2,6 +2,7 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap.css";
 img {
   width: 100%;
 }
@@ -37,7 +38,7 @@ header .nav i {
 }
 header .container {
   margin: auto;
-  width: 100%;
+  width: 100vw;
 }
 
 img {
@@ -144,51 +145,52 @@ img {
 
 .shop {
   margin-top: 2rem;
+  margin: 0 1em;
 }
 
-section {
+.container {
   padding: 4rem 0 3rem;
 }
-section .section-title {
+.container .section-title {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 600;
 }
-section .shop-content {
+.container .shop-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   gap: 1.5rem;
 }
-section .shop-content .product-box {
+.container .shop-content .product-box {
   position: relative;
 }
-section .shop-content .product-box:hover {
+.container .shop-content .product-box:hover {
   border: 1px solid black;
   transition: 0.4s;
 }
-section .shop-content .product-box .container-img {
+.container .shop-content .product-box .container-img {
   position: relative;
 }
-section .shop-content .product-box .container-img:hover {
+.container .shop-content .product-box .container-img:hover {
   padding: 10px;
   transition: 0.4s;
 }
-section .shop-content .product-box .container-img img {
+.container .shop-content .product-box .container-img img {
   width: 100%;
   padding-bottom: 0.5rem;
 }
-section .shop-content .product-box .product-title {
+.container .shop-content .product-box .product-title {
   padding: 5px;
   font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
-section .shop-content .product-box .price {
+.container .shop-content .product-box .price {
   font-weight: 500;
   padding: 5px;
 }
-section .shop-content .product-box .add-cart {
+.container .shop-content .product-box .add-cart {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -198,6 +200,25 @@ section .shop-content .product-box .add-cart {
   background-color: #171427;
   color: #fff;
   cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.banner-wrapper {
+  width: 100vw;
+}
+.banner-wrapper .banner-items {
+  display: flex;
+  flex-direction: row;
+}
+.banner-wrapper .banner-items .item {
+  flex: none;
+}
+.banner-wrapper .banner-items .item img {
+  width: 100%;
+  height: 100%;
 }
 
 * {
