@@ -24,6 +24,7 @@ Esse projeto foi construido utilizando as seguntes ferramentas:
 
 * HTML;
 * CSS;
+* SCSS;
 * JavaScript;
 
 ## Obrigado! 👋
