@@ -12,20 +12,12 @@ Nosso ecommerce conta com um carrossel de banners proximo ao cabeçalho. Itens i
 Tamanhos são adicionados ao colocar os itens no carrinho.
 Ao clicar em finalizar sua compra, temos um modal de pós compra, com um resumo da aquisição.  
 
-* **Versão Desktop 💻** - 
-![alt text](https://github.com/GabrielMoreiraB/Menu-Restaurante/blob/main/images/desktop.png)
+* **Versão** - 
+![alt text](https://github.com/GabrielMoreiraB/Luffy-store/blob/main/img/img%201.png)
 
-* **Versão Tablet 📱** - 
-![alt text](https://github.com/GabrielMoreiraB/Menu-Restaurante/blob/main/images/tablet.png)
 
-* **Versão Mobile 🤳** - 
-![alt text](https://github.com/GabrielMoreiraB/Menu-Restaurante/blob/main/images/mobile.png)
+![alt text](https://github.com/GabrielMoreiraB/Luffy-store/blob/main/img/img%202.png)
 
-#* **Costas do card** - 
-
-![alt text](https://github.com/GabrielMoreiraB/Menu-Restaurante/blob/main/images/cardflip.png)
-
-OBS: O card Diner Double possui textos reais como exemplo da aplicação proposta!
 ## 🛠️ Construído com
 
 Esse projeto foi construido utilizando as seguntes ferramentas:
@@ -34,3 +26,4 @@ Esse projeto foi construido utilizando as seguntes ferramentas:
 * CSS;
 * JavaScript;
 
+## Obrigado! 👋
