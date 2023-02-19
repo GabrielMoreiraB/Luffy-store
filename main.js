@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', function(){
         cartItem.querySelector('.cart-price').innerHTML = val;
         cartItem.querySelector('.cart-quantity').value =item.quant;
 
-        a(cartItem,item);
+        attQuant(cartItem,item);
 
         let cartremove = cartItem.querySelector('.card-remove');
 
@@ -234,7 +234,7 @@ window.addEventListener('DOMContentLoaded', function(){
         return valor;
     }
 
-    function a (cartItem, item){
+    function attQuant (cartItem, item){
         const quantidade = cartItem.querySelector('.cart-quantity');
         quantidade.addEventListener('change', (event) => {
             //console.log(event.target.value)
