@@ -100,8 +100,16 @@ img {
      object-fit: contain;
   padding: 5px;
 }
-.cart .cart-box .cart-price {
+.cart .cart-box .cart-size-value {
+  display: flex;
+  gap: 1.5em;
+}
+.cart .cart-box .cart-size-value .cart-price {
   font-weight: 500;
+  display: inline-block;
+}
+.cart .cart-box .cart-size-value .cart-size {
+  font-weight: bold;
 }
 .cart .cart-box .detail-box {
   display: flex;

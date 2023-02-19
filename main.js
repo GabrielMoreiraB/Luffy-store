@@ -148,17 +148,27 @@ window.addEventListener('DOMContentLoaded', function(){
                 //console.log(itemClicado);
                 const existe = cartArray.find(item => item.id == num);
                 const SIZE = paiclick.querySelector('.size');
-                itemClicado.size = SIZE.value
+                
 
                 if(existe){
-                    let index = cartArray.findIndex(elemento => elemento.id ===existe.id)
-                    cartArray[index].quant++
-                    //console.log(cartArray[index].quant) 
-
-                } else{
-                    itemClicado.quant = 1;
+                    //essa pate de verificação n esta funcionando bem, ela altera todos os itens antigos de mesmo id mesmo com tamanhos diferentes
+                    let index = cartArray.findIndex(elemento => elemento.id === existe.id)
+                    if(cartArray[index].size === SIZE.value){
+                        cartArray[index].quant++
+                    }else{
+                        cartArray.push(itemClicado);
+                        cartArray[cartArray.length-1].size = SIZE.value;
+                        cartArray[cartArray.length-1].quant = 1;
+                    }
+                    
+                }else{
                     cartArray.push(itemClicado);
+                    cartArray[cartArray.length-1].size = SIZE.value;
+                    cartArray[cartArray.length-1].quant = 1;
+                    
                 }
+
+                //console.log(produtos)
                 console.log(cartArray)
                 addDispCart();
                 atualizaTotal();
@@ -194,6 +204,7 @@ window.addEventListener('DOMContentLoaded', function(){
         cartItem.querySelector('.cart-product-title').innerHTML= item.name;
         cartItem.querySelector('.cart-price').innerHTML = val;
         cartItem.querySelector('.cart-quantity').value =item.quant;
+        cartItem.querySelector('.cart-size').innerHTML = item.size;
 
         attQuant(cartItem,item);
 
@@ -201,11 +212,11 @@ window.addEventListener('DOMContentLoaded', function(){
 
         cartremove.addEventListener('click', function(){
             let nomeelementocartremove = cartremove.parentNode.querySelector('.cart-product-title').innerHTML;
-            console.log(nomeelementocartremove);
+            //console.log(nomeelementocartremove);
 
             let itemexclusao = cartArray.find(item => item.name == nomeelementocartremove);
 
-            console.log(itemexclusao);
+            //console.log(itemexclusao);
 
             cartArray.splice(cartArray.findIndex(item => item.name == nomeelementocartremove), 1);
             addDispCart();
@@ -297,6 +308,7 @@ window.addEventListener('DOMContentLoaded', function(){
             <div class="modal-box-info">
                 <small class="modal-price">R$${(item.price.toFixed(2))}</small>
                 <p class="modal-quantity">Quant: ${item.quant}</p>
+                <p class="modal-size">Size: ${item.size}</p>
             </div>
         </div>`
         })
