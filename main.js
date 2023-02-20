@@ -84,7 +84,7 @@ const cartContent = document.querySelector('.cart-content');
 
 const totalPrice = document.querySelector('.total-price');
 
-const cartArray = []
+let cartArray = []
 
 
 //Abre e fecha menu 
@@ -292,10 +292,14 @@ window.addEventListener('DOMContentLoaded', function(){
         modal.showModal()
         totalModelValue.innerHTML = totalPrice.innerHTML;
         addDispmodel(cartArray)
+        
     })
 
     closeModal.addEventListener('click', () =>{
-        modal.close()
+        modal.close();
+        cartArray = [];
+        addDispCart();
+        atualizaTotal();
     })
 
 
