@@ -1,4 +1,4 @@
-# ECOMMERCE DE ROUPAS 🛒
+# ECOMMERCE 🛒
 
 Projeto baseado na criação de um ecommerce de roupas e acessorios, contanto com abas de carrinho e pos compras. 
 
