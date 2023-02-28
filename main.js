@@ -194,6 +194,7 @@ window.addEventListener('DOMContentLoaded', function(){
             cartContent.appendChild(cartItem);
 
             preencheCartItem(cartItem, item);
+            attNumCar();
         })
     }
 
@@ -319,3 +320,10 @@ window.addEventListener('DOMContentLoaded', function(){
         dispModal = dispModal.join('');
         modalCompras.innerHTML = dispModal
         }
+
+
+    function attNumCar(){
+        let numCar = document.querySelector('.num-car');
+        numCar.innerHTML = cartArray.length
+    }
+    

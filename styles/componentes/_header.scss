@@ -42,7 +42,7 @@ header{
             cursor: pointer;
             margin-right: 1em;
             position: absolute;
-            right: 0;
+            right: 1vw;
             
         }
     }
@@ -50,4 +50,18 @@ header{
         margin: auto;
         width: 100vw;
     }
+
+    .num-car{
+        position: absolute !important;
+        background-color: rgb(11, 11, 11) ;
+        color: white;
+        top: 2vh;
+        right: 4vw;
+        font-weight: bolder;
+        border: solid 2px black;
+        padding: 3px 8px;
+        border-radius: 50%;
+    }
+    
+    
 }
